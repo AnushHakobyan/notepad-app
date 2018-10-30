@@ -5,6 +5,7 @@ import { SAVE_NOTEPAD }  from '../actions/action.types';
 const saveNotepad = (body) => postApiRequest('https://api.github.com/gists', body);
 
 function* saveNotepadSaga(action) {
+    const { body } = action.payload;
     const response = yield call(saveNotepad, body);
     console.log(response);
 }

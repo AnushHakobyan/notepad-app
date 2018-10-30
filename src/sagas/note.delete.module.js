@@ -5,6 +5,7 @@ import { DELETE_NOTE }  from '../actions/action.types';
 const getNotepad = (body) => deleteApiRequest('https://api.github.com/gists', body);
 
 function* deleteNoteSaga(action) {
+    const { id } = action.payload;
     const response = yield call(getNotepad, id);
     if (response.ok) {
         // put success

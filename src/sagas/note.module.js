@@ -5,6 +5,7 @@ import { GET_NOTE }  from '../actions/action.types';
 const getNotepad = (id) => getApiRequest(`https://api.github.com/gists/${id}`);
 
 function* getNoteSaga(action) {
+    const { id } = action.payload;
     const response = yield call(getNotepad, id);
     if (response.ok) {
         // put success
