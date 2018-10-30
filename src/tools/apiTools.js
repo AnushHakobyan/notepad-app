@@ -1,6 +1,6 @@
 function makeApiRequest(endpoint, body, method) {
     const headers = new Headers();
-    headers.append('Content-Type', 'application/json');
+    // headers.append('Content-Type', 'application/json');
     headers.append('Authorization', 'token 733dbc1e0cc227c664c8d1f9c60b99e191d2904b');
     // headers.append('Access-Control-Allow-Origin', '*');
     headers.append('Accept', 'application/vnd.github.v3+json');

@@ -8,9 +8,9 @@ function* deleteNoteSaga(action) {
     const { id } = action.payload;
     const response = yield call(getNotepad, id);
     if (response.ok) {
-        // put success
+        // put DELETE_NOTE_SUCCESS which removes specified note from the redux state as well
     } else {
-        //put failure
+        //put DELETE_NOTE_FAILURE with the error
     }
 }
 

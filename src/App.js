@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import NotepadFormContainer from './components/NotepadForm';
 import './App.scss';
 
+
 class App extends Component {
     render() {
         return (

@@ -6,10 +6,14 @@ const getNotepads = () => getApiRequest('https://api.github.com/gists');
 
 function* getNotepadsSaga(action) {
     const response = yield call(getNotepads);
+    // This is the main boilerplate of creating saga side effects. When saga which makes API call is tied with the
+    // appropriate action, already described in the reducer and dispatched by the component. Then depending on the
+    // API response success or failure actions are being put. They handle the final state of the reducer after the
+    // action is done.
     if (response.ok) {
-        // put success action
+        // GET_NOTEPADS_SUCCESS success action
     } else {
-        // put failure action
+        // GET_NOTEPADS_FAILURE failure action
     }
 }
 
