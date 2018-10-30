@@ -8,7 +8,16 @@ class App extends Component {
             <div className="App">
                 Dictionary
                 <Button
-                    label="Click"
+                    label="Click 1"
+                    viewType="primary"
+                />
+                <Button
+                    label="Click 2"
+                    viewType="secondary"
+                />
+                <Button
+                    label="Click 3"
+                    viewType="danger"
                 />
             </div>
         );
