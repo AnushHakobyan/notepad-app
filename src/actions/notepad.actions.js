@@ -4,7 +4,7 @@ import {
 } from '../actions/action.types';
 
 export const saveNotepad = title => {
-    console.log('connected');
+    console.log(title);
     return {
     payload: {
         title,
