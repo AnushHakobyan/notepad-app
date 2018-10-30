@@ -12,7 +12,7 @@ const Button = ({ label, type, viewType, onClickHandler }) => (
     <button
         type={type}
         onClick={onClickHandler}
-        className={styles[viewType]}
+        className={`${styles[viewType]} ${styles.general}`}
     >
         {label}
     </button>
