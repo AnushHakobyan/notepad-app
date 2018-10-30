@@ -279,6 +279,9 @@ module.exports = {
             use: getStyleLoaders({
               importLoaders: 1,
                 modules: true,
+                includePaths: [
+                    path.resolve('./node_modules/foundation-sites/scss'),
+                ],
             }),
           },
           // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
@@ -289,6 +292,9 @@ module.exports = {
               importLoaders: 1,
               modules: true,
               getLocalIdent: getCSSModuleLocalIdent,
+                includePaths: [
+                    path.resolve('./node_modules/foundation-sites/scss'),
+                ],
             }),
           },
           // Opt-in support for SASS (using .scss or .sass extensions).
@@ -299,7 +305,15 @@ module.exports = {
           {
             test: sassRegex,
             exclude: sassModuleRegex,
-            use: getStyleLoaders({ importLoaders: 2, modules: true }, 'sass-loader'),
+            use: getStyleLoaders(
+                {
+                    importLoaders: 2,
+                    modules: true,
+                    includePaths: [
+                        path.resolve('./node_modules/foundation-sites/scss'),
+                    ],
+                },
+                'sass-loader'),
           },
           // Adds support for CSS Modules, but using SASS
           // using the extension .module.scss or .module.sass
@@ -310,6 +324,9 @@ module.exports = {
                 importLoaders: 2,
                 modules: true,
                 getLocalIdent: getCSSModuleLocalIdent,
+                  includePaths: [
+                      path.resolve('./node_modules/foundation-sites/scss'),
+                  ],
               },
               'sass-loader'
             ),

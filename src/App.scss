@@ -1,7 +1,8 @@
-//@import "~foundation-sites/scss/settings/settings";
+//@import "~foundation-sites/scss/settings/_settings";
 @import "~foundation-sites/scss/foundation";
 
 @include foundation-global-styles;
+@include foundation-grid;
 
 .App {
   text-align: center;
